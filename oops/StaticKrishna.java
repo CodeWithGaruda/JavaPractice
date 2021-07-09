@@ -5,8 +5,13 @@
 class Alpha {
     Alpha() {
         super();
-        System.out.println("here it will check for 1)static 2) non static blocks ");
+        System.out.println("before it continue with this code it will check for static and non static");
         System.out.println("this is default constructor");
+    }
+
+    Alpha(int a) {
+        this();// it will call this calss contructor
+        System.out.println("this is parameterized");
     }
 
     static int a, b, c;// static variable
@@ -45,7 +50,22 @@ public class StaticKrishna {
         System.out.println("this is before alpha object");
         Alpha alpha = new Alpha();
         // System.out.println(Alpha.a);
+        System.out.println("____________________________________________");
+        Alpha a = new Alpha(1);
+        // here when u call the object it goes to super again bt this time it wont call
+        // the static block because static blocks are called only once thoughout the
+        // program and non static blocks are called evrutime object is created.
+
+        // we use static to use a single copy thoughout the program
         System.out.println("this is after alpha object");
     }
 
 }
+/**
+ * this is before alpha object this is static block this is non static block
+ * before it continue with this code it will check for static and non static
+ * this is default constructor ____________________________________________ this
+ * is non static block before it continue with this code it will check for
+ * static and non static this is default constructor this is parameterized this
+ * is after alpha object
+ */
