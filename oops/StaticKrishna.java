@@ -58,6 +58,7 @@ public class StaticKrishna {
 
         // we use static to use a single copy thoughout the program
         System.out.println("this is after alpha object");
+
     }
 
 }
